@@ -11,3 +11,11 @@ To install the environment of the project, please install Python 3 and PyTorch w
 conda create --name rppgd python=3.8
 conda activate rppgd
 ```
+
+Then clone this repo and install the corresonding requirements:
+```shell
+git clone --recursive
+cd RP-PGD
+pip install -r requirements.txt
+```
+
