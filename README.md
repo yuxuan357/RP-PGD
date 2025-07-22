@@ -14,7 +14,7 @@ conda activate rppgd
 
 Then clone this repo and install the corresonding requirements:
 ```shell
-git clone --recursive
+git clone --recursive git@github.com:yuxuan357/RP-PGD.git
 cd RP-PGD
 pip install -r requirements.txt
 ```
