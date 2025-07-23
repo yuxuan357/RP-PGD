@@ -20,7 +20,7 @@ pip install -r requirements.txt
 ```
 
 ## Hardware Requirement
-We adopted 4 GPUs of RTX 3090 Ti GPUs. We strongly recommend utilizing 4 to 8 GPUs, each equipped with >= 24GB memory, for optimal performance.
+We strongly recommend utilizing 4 to 8 GPUs, each equipped with >= 24GB memory (such as NVIDIA RTX 4090 GPUs), for optimal performance.
 
 ## Training
 Firstly, please refer to the readme in ``initmodel" to download the weight of the initial backbone pretrained on ImageNet.
