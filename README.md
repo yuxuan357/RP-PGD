@@ -23,4 +23,36 @@ pip install -r requirements.txt
 We strongly recommend utilizing 4 to 8 GPUs, each equipped with >= 24GB memory (such as NVIDIA RTX 4090 GPUs), for optimal performance.
 
 ## Training
-Firstly, please refer to the readme in ``initmodel" to download the weight of the initial backbone pretrained on ImageNet.
+The dataset Pascal VOC, Cityscapes, and ADE20k can be downloaded from the website as follows:
+
+1) Pascal VOC: http://host.robots.ox.ac.uk/pascal/VOC/voc2012/ (with SBD augmentation);
+2) Cityscapes: https://www.cityscapes-dataset.com/;
+3) ADE20k: https://ade20k.csail.mit.edu/
+
+Change the data root of these datasets in the config files.
+
+For pre-trained backbone, please refer to the readme in ``initmodel" to download the weight of the initial checkpoint pretrained on ImageNet.
+
+- Adversarially train PSPNet with RP-PGD++ on Pascal VOC:
+
+  `sh tool_train/voc2012/psp_train_sat.sh`
+
+- Adversarially train PSPNet with RP-PGD++ on Cityscapes:
+
+  `sh tool_train/cityscapes/psp_train_sat.sh`
+
+- Adversarially train PSPNet with RP-PGD++ on ADE20k:
+
+  `sh tool_train/ade20k/psp_train_sat.sh`
+
+- Adversarially train DeepLabv3 with RP-PGD++ on Pascal VOC:
+
+  `sh tool_train/voc2012/aspp_train_sat.sh`
+
+- Adversarially train DeepLabv3 with RP-PGD++ on Cityscapes:
+
+  `sh tool_train/cityscapes/aspp_train_sat.sh`
+
+- Adversarially train DeepLabv3 with RP-PGD++ on ADE20k:
+
+  `sh tool_train/ade20k/aspp_train_sat.sh`
