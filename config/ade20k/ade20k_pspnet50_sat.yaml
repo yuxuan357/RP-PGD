@@ -7,8 +7,8 @@ DATA:
 TRAIN:
   layers: 50
   sync_bn: True  # adopt sync_bn or not
-  train_h: 473
-  train_w: 473
+  train_h: 465
+  train_w: 465
   scale_min: 0.5  # minimum random scale
   scale_max: 2.0  # maximum random scale
   rotate_min: -10  # minimum random rotate
@@ -48,8 +48,8 @@ TEST:
   test_list: /data1/zyx/ade20k/list/val.txt
   split: val  # split in [train, val and test]
   base_size: 512  # based size for scaling
-  test_h: 473
-  test_w: 473
+  test_h: 465
+  test_w: 465
   scales: [1.0]  # evaluation scales, ms as [0.5, 0.75, 1.0, 1.25, 1.5, 1.75]
   has_prediction: False  # has prediction already or not
   index_start: 0  # evaluation start index in list
