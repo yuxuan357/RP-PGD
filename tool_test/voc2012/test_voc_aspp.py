@@ -84,8 +84,8 @@ def FGSM(input, target, model, clip_min, clip_max, eps=0.2):
     return adversarial_example
 
 
-
-def BIM(input, target, model, eps=0.03, k_number=2, alpha=0.01):
+# Replace this with any attack you want
+def Attack(input, target, model, eps=0.03, k_number=2, alpha=0.01):
     input_unnorm = input.clone().detach()
     input_unnorm[:, 0, :, :] = input_unnorm[:, 0, :, :] * std_origin[0] + mean_origin[0]
     input_unnorm[:, 1, :, :] = input_unnorm[:, 1, :, :] * std_origin[1] + mean_origin[1]
@@ -101,7 +101,6 @@ def BIM(input, target, model, eps=0.03, k_number=2, alpha=0.01):
         adversarial_example.requires_grad = True
         model.zero_grad()
     return adversarial_example
-
 
 
 def main():
@@ -183,7 +182,7 @@ def net_process(model, image, target, mean, std=None):
         target = torch.cat([target, target.flip(2)], 0)
 
     if attack_flag:
-        adver_input = BIM(input, target, model, eps=0.03, k_number=2, alpha=0.01)
+        adver_input = Attack(input, target, model, eps=0.03, k_number=2, alpha=0.01)
         with torch.no_grad():
             output = model(adver_input)
     else:
