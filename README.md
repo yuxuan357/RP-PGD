@@ -73,7 +73,7 @@ For pre-trained backbone, please refer to the readme in ``initmodel" to download
 
 ## Test
 
-  - Evaluate the PSPNet AT with RP-PGD(++) on Pascal VOC:
+- Evaluate the PSPNet AT with RP-PGD(++) on Pascal VOC:
 
   ```shell
   sh tool_test/voc2012/psp_test_sat.sh
