@@ -15,6 +15,6 @@ cp tool_train/ade20k/aspp_train_sat.sh tool_train/train_sat_aspp.py ${config} ${
 export PYTHONPATH=./
 export CUDA_HOME=/home/zhangyuxuan/cuda-11.1
 #srun -p $PARTITION -n1 --gres=gpu:8 --ntasks-per-node=8 --job-name=python \
-$PYTHON tool_train/train_sat_psp.py \
+$PYTHON tool_train/train_sat_aspp.py \
   --config=${config} \
   2>&1 | tee ${model_dir}/train-$now.log
