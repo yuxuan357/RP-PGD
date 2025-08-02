@@ -68,3 +68,41 @@ For pre-trained backbone, please refer to the readme in ``initmodel" to download
   ```shell
   sh tool_train/ade20k/aspp_train_sat.sh
   ```
+
+  ## Test
+
+  - Evaluate the PSPNet AT with RP-PGD++ on Pascal VOC:
+
+  ```shell
+  sh tool_test/voc2012/psp_test_sat.sh
+  ```
+
+- Evaluate the PSPNet AT with RP-PGD++ on Cityscapes:
+
+  ```shell
+  sh tool_test/cityscapes/psp_test_sat.sh
+  ```
+
+- Evaluate the PSPNet AT with RP-PGD++ on ADE20k:
+
+  ```shell
+  sh tool_test/ade20k/psp_test_sat.sh
+  ```
+
+- Evaluate the DeepLabv3 AT with RP-PGD++ on Pascal VOC:
+
+  ```shell
+  sh tool_test/voc2012/aspp_test_sat.sh
+  ```
+
+- Evaluate the DeepLabv3 AT with RP-PGD++ on Cityscapes:
+
+  ```shell
+  sh tool_test/cityscapes/aspp_test_sat.sh
+  ```
+
+- Evaluate the DeepLabv3 AT with RP-PGD++ on ADE20k:
+
+  ```shell
+  sh tool_test/ade20k/aspp_test_sat.sh
+  ```
