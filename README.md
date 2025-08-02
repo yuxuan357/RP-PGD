@@ -33,76 +33,99 @@ Change the data root of these datasets in the config files.
 
 For pre-trained backbone, please refer to the readme in ``initmodel" to download the weight of the initial checkpoint pretrained on ImageNet.
 
-- Adversarially train PSPNet with RP-PGD++ on Pascal VOC:
+- Adversarially train PSPNet with RP-PGD(++) on Pascal VOC:
 
   ```shell
   sh tool_train/voc2012/psp_train_sat.sh
   ```
 
-- Adversarially train PSPNet with RP-PGD++ on Cityscapes:
+- Adversarially train PSPNet with RP-PGD(++) on Cityscapes:
 
   ```shell
   sh tool_train/cityscapes/psp_train_sat.sh
   ```
 
-- Adversarially train PSPNet with RP-PGD++ on ADE20k:
+- Adversarially train PSPNet with RP-PGD(++) on ADE20k:
 
   ```shell
   sh tool_train/ade20k/psp_train_sat.sh
   ```
 
-- Adversarially train DeepLabv3 with RP-PGD++ on Pascal VOC:
+- Adversarially train DeepLabv3 with RP-PGD(++) on Pascal VOC:
 
   ```shell
   sh tool_train/voc2012/aspp_train_sat.sh
   ```
 
-- Adversarially train DeepLabv3 with RP-PGD++ on Cityscapes:
+- Adversarially train DeepLabv3 with RP-PGD(++) on Cityscapes:
 
   ```shell
   sh tool_train/cityscapes/aspp_train_sat.sh
   ```
 
-- Adversarially train DeepLabv3 with RP-PGD++ on ADE20k:
+- Adversarially train DeepLabv3 with RP-PGD(++) on ADE20k:
 
   ```shell
   sh tool_train/ade20k/aspp_train_sat.sh
   ```
 
-  ## Test
+## Test
 
-  - Evaluate the PSPNet AT with RP-PGD++ on Pascal VOC:
+  - Evaluate the PSPNet AT with RP-PGD(++) on Pascal VOC:
 
   ```shell
   sh tool_test/voc2012/psp_test_sat.sh
   ```
 
-- Evaluate the PSPNet AT with RP-PGD++ on Cityscapes:
+- Evaluate the PSPNet AT with RP-PGD(++) on Cityscapes:
 
   ```shell
   sh tool_test/cityscapes/psp_test_sat.sh
   ```
 
-- Evaluate the PSPNet AT with RP-PGD++ on ADE20k:
+- Evaluate the PSPNet AT with RP-PGD(++) on ADE20k:
 
   ```shell
   sh tool_test/ade20k/psp_test_sat.sh
   ```
 
-- Evaluate the DeepLabv3 AT with RP-PGD++ on Pascal VOC:
+- Evaluate the DeepLabv3 AT with RP-PGD(++) on Pascal VOC:
 
   ```shell
   sh tool_test/voc2012/aspp_test_sat.sh
   ```
 
-- Evaluate the DeepLabv3 AT with RP-PGD++ on Cityscapes:
+- Evaluate the DeepLabv3 AT with RP-PGD(++) on Cityscapes:
 
   ```shell
   sh tool_test/cityscapes/aspp_test_sat.sh
   ```
 
-- Evaluate the DeepLabv3 AT with RP-PGD++ on ADE20k:
+- Evaluate the DeepLabv3 AT with RP-PGD(++) on ADE20k:
 
   ```shell
   sh tool_test/ade20k/aspp_test_sat.sh
   ```
+
+Note: We provide our extension version RP-PGD++ in the training code. If you want to train and test on the original version RP-PGD, please ignore the intra-class objective.
+
+## Citation
+
+If you find this project helpful, please cite:
+
+  ```
+  @inproceedings{zhang2025rp,
+  title={RP-PGD: Boosting Segmentation Robustness with a Region-and-Prototype Based Adversarial Attack},
+  author={Zhang, Yuxuan and Shi, Zhenbo and Wang, Shuchang and Yang, Wei and Wang, Shaowei and Xue, Yinxing},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={39},
+  number={10},
+  pages={10338--10347},
+  year={2025}
+  }
+  ```
+
+## Acknowledgment
+
+Our project is inspired by [semseg](https://github.com/hszhao/semseg) and [Robust-Semantic-Segmentation](https://github.com/dvlab-research/Robust-Semantic-Segmentation/tree/main?tab=readme-ov-file). Thank them for their great work.
+
