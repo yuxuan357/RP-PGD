@@ -13,8 +13,6 @@ mkdir -p ${model_dir} ${result_dir}
 cp tool_train/cityscapes/aspp_train_sat.sh tool_train/train_sat_aspp.py ${config} ${exp_dir}
 
 export PYTHONPATH=./
-export CUDA_HOME=/home/zhangyuxuan/cuda-11.1
-#srun -p $PARTITION -n1 --gres=gpu:8 --ntasks-per-node=8 --job-name=python \
-$PYTHON -u tool_train/train_sat_aspp.py \
+$PYTHON tool_train/train_sat_aspp.py \
   --config=${config} \
   2>&1 | tee ${model_dir}/train-$now.log
