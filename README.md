@@ -35,24 +35,36 @@ For pre-trained backbone, please refer to the readme in ``initmodel" to download
 
 - Adversarially train PSPNet with RP-PGD++ on Pascal VOC:
 
-  `sh tool_train/voc2012/psp_train_sat.sh`
+  ```shell
+  sh tool_train/voc2012/psp_train_sat.sh
+  ```
 
 - Adversarially train PSPNet with RP-PGD++ on Cityscapes:
 
-  `sh tool_train/cityscapes/psp_train_sat.sh`
+  ```shell
+  sh tool_train/cityscapes/psp_train_sat.sh
+  ```
 
 - Adversarially train PSPNet with RP-PGD++ on ADE20k:
 
-  `sh tool_train/ade20k/psp_train_sat.sh`
+  ```shell
+  sh tool_train/ade20k/psp_train_sat.sh
+  ```
 
 - Adversarially train DeepLabv3 with RP-PGD++ on Pascal VOC:
 
-  `sh tool_train/voc2012/aspp_train_sat.sh`
+  ```shell
+  sh tool_train/voc2012/aspp_train_sat.sh
+  ```
 
 - Adversarially train DeepLabv3 with RP-PGD++ on Cityscapes:
 
-  `sh tool_train/cityscapes/aspp_train_sat.sh`
+  ```shell
+  sh tool_train/cityscapes/aspp_train_sat.sh
+  ```
 
 - Adversarially train DeepLabv3 with RP-PGD++ on ADE20k:
 
-  `sh tool_train/ade20k/aspp_train_sat.sh`
+  ```shell
+  sh tool_train/ade20k/aspp_train_sat.sh
+  ```
