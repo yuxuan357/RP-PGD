@@ -29,7 +29,7 @@ TRAIN:
   manual_seed:
   print_freq: 10
   save_freq: 10
-  save_path: exp/ade20k/aspp_sat/model
+  save_path: exp/ade20k/pspnet50_sat/model
   weight:  # path to initial weight (default: none)
   resume:  # path to latest checkpoint (default: none)
   evaluate: True  # evaluate on validation set, extra gpu memory needed and small batch_size_val is recommend
@@ -55,7 +55,7 @@ TEST:
   index_start: 0  # evaluation start index in list
   index_step: 0  # evaluation step index in list, 0 means to end
   test_gpu: [0]
-  model_path: pretrain/ade20k/deeplabv3/sat/train_epoch_100_psp.pth  # evaluation model path
-  save_folder: exp/ade20k/aspp_sat/result/epoch_100_test/val/ss  # results save folder
+  model_path: pretrain/ade20k/pspnet/sat/train_epoch_100_psp.pth  # evaluation model path
+  save_folder: exp/ade20k/pspnet50_sat/result/epoch_100_test/val/ss  # results save folder
   colors_path: dataset/ade20k/ade20k_colors.txt  # path of dataset colors
   names_path: dataset/ade20k/ade20k_names.txt  # path of dataset category names
