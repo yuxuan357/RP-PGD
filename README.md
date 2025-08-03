@@ -129,5 +129,5 @@ If you find this project helpful, please cite:
 
 ## Acknowledgment
 
-Our project is inspired by [semseg](https://github.com/hszhao/semseg) and [Robust-Semantic-Segmentation](https://github.com/dvlab-research/Robust-Semantic-Segmentation/tree/main?tab=readme-ov-file). Thank them for their great work.
+Our project is inspired by [semseg](https://github.com/hszhao/semseg), [Robust-Semantic-Segmentation](https://github.com/dvlab-research/Robust-Semantic-Segmentation/tree/main?tab=readme-ov-file), and [SegPGD](https://github.com/asif-hanif/segpgd). Thank them for their great work.
 
