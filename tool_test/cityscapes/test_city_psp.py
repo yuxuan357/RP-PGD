@@ -56,7 +56,7 @@ def FGSM(input, target, model, clip_min, clip_max, eps=0.2):
     input_variable = input.detach().clone()
     input_variable.requires_grad = True
     model.zero_grad()
-    result = model(input_variable)
+    result, _ = model(input_variable)
     if args.zoom_factor != 8:
         h = int((target.size()[1] - 1) / 8 * args.zoom_factor + 1)
         w = int((target.size()[2] - 1) / 8 * args.zoom_factor + 1)
