@@ -54,7 +54,7 @@ def FGSM(input, target, model, clip_min, clip_max, eps=0.2):
     input_variable = input.detach().clone()
     input_variable.requires_grad = True
     model.zero_grad()
-    result = model(input_variable)
+    result, _ = model(input_variable)
     if args.zoom_factor != 8:
         h = int((target.size()[1] - 1) / 8 * args.zoom_factor + 1)
         w = int((target.size()[2] - 1) / 8 * args.zoom_factor + 1)
@@ -184,10 +184,10 @@ def net_process(model, image, target, mean, std=None):
     if attack_flag:
         adver_input = Attack(input, target, model, eps=0.03, k_number=2, alpha=0.01)
         with torch.no_grad():
-            output = model(adver_input)
+            output, _ = model(adver_input)
     else:
         with torch.no_grad():
-            output = model(input)
+            output, _ = model(input)
 
     _, _, h_i, w_i = input.shape
     _, _, h_o, w_o = output.shape
